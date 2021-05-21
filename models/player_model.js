@@ -37,6 +37,7 @@ const Player = class Player {
             ]
         );
     }
+
     static create2(req, res) {
         return db.execute(
             'INSERT INTO player (pid, `name`, real_name, belong_clan, `position`, main,world_champ,photo) VALUES (?, ?,?, ?,?,?,?,?)',
