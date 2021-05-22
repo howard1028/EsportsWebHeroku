@@ -11,7 +11,7 @@ router.get('/', function (req, res, next) {
     request('https://kanstrapi.herokuapp.com/players/1', function (error, response, body) {
         if (!error && response.statusCode == 200) {
             //console.log(body) // 列印google首頁
-            res.json(body);
+            res.send(body);
         }
     })
 });
