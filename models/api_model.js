@@ -11,8 +11,7 @@ const Member = class Member {
     }
 
     //Read
-    static
-    fetch_api() {
+    static fetch_api() {
         return db.execute('SELECT player.name as ID,player.real_name,player.position,`character`.name as `main`,division.area_name as "area",clan.name as "戰隊",player.photo,clan.logo as `logo` FROM player,clan,`character`,division where player.belong_clan=clan.cid AND clan.belong = division.did AND player.main = `character`.chid ;');
     }
 
