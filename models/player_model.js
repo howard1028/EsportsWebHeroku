@@ -10,7 +10,7 @@ const Player = class Player {
         this.main = main;
         this.world_champ = world_champ;
         this.photo = photo;
-        this.real_name = this.real_name
+        this.real_name = real_name     //原本多打一個this
     }
 
     //Read T1  by kan 04/18

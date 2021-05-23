@@ -34,7 +34,7 @@ exports.createPlayer = async (req, res) => {
   }
 };
 
-//creat by html post
+//create by html post
 exports.createPlayer2 = async (req, res) => {
   console.log('createPlayer2', req.body);
   try {
@@ -47,7 +47,7 @@ exports.createPlayer2 = async (req, res) => {
 };
 
 
-//Read PlayerById by Kan 0419
+//Read PlayerById 0419
 exports.getClanNumber = async (req, res) => {
   let data = {};
   data.cid = 0;
@@ -83,6 +83,7 @@ exports.updatePlayer = async (req, res) => {
 
 //Delete
 exports.delete2Player = async (req, res) => {
+
   console.log('deletePlayer', req.params.id);
   try {
     await Player.deleteById(req.params.id).then(([rows]) => {
@@ -92,3 +93,6 @@ exports.delete2Player = async (req, res) => {
     console.log(err);
   }
 };
+
+
+

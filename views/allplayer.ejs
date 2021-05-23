@@ -32,36 +32,33 @@
 				<!-- Main -->
 					<section id="main" class="wrapper">
 						<div class="inner">
-							<h1 class="major"><%= player[0].戰隊 %></h1>
-							<div class="row gtr-uniform">
-                                <% for(let i =0;i<5;i++){%>
-								<div class="col-4"><span class="image fit"><img src="<%=player[i].photo%>" alt="" /></span></div>
-                                <% }　%>
-                            </div>
-							<h1 class="major"><%= player[5].戰隊 %></h1>
-							<div class="row gtr-uniform">
-                                <% for(let i =5;i<10;i++){%>
-								<div class="col-4"><span class="image fit"><img src="<%=player[i].photo%>" alt="" /></span></div>
-                                <% }　%>
-                            </div>
 							<div class="table-wrapper">
 								<table>
 									<thead>
 										<tr>
-											<th>ID</th>
+											<th>player ID</th>
+											
+											<th>遊戲ID</th>
 											<th>真實性名</th>
 											<th>位置</th>
 											<th>Main角</th>
+											<th>刪除</th>
 										</tr>
 									</thead>
 									<tbody>
 										<% for(let i=0; i<player.length;i++) { %>
 											<tr>
+												<td><%=player[i].pid%></td>
 												<td><%=player[i].ID%></td>
 												<td><%=player[i].real_name%></td>
 												<td><%=player[i].position%></td>
 												<td><%=player[i].main%></td>
-											</tr>
+												<td>
+													<a
+													  class="button delete"
+													  href="/my/delete/<%=player[i].pid%>"
+													  >Delete</a>
+												</td>
 											<%}%>
 									</tbody>
 									<tfoot>
@@ -74,7 +71,6 @@
 							</div>
 					</section>
 					
-
 			</div>
 
 		<!-- Footer -->
